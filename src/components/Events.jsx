@@ -3,7 +3,7 @@ import React from 'react';
 
 const Events = () => {
     return (
-        <section className="rts-event-area rts-section-gapTop">
+        <section className="rts-event-area">
             <div className="container">
                 <div className="section-title-area text-center">
                     <p className="pre-title justify-content-center"><img src="assets/images/banner/title-img.svg" alt="" />Acara</p>

@@ -23,8 +23,8 @@ function App() {
             <Classes />
             {/*<Categories />*/}
             {/*<Team />*/}
-            <Events />
             <VerticalStepper />
+            <Events />
             <Testimonials />
             <Footer />
             <Preloader />

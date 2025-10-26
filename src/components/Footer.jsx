@@ -28,22 +28,6 @@ const Footer = () => {
                                 </div>
                             </div>
                             {/* single sized  footer end */}
-                            {/* single sized  footer  */}
-                            <div className="footer-single-wized">
-                                <div className="head">
-                                    <h6 className="title">Tentang Kami</h6>
-                                </div>
-                                <div className="body">
-                                    <ul className="menu">
-                                        <li><a href="about.html">Tentang Kami</a></li>
-                                        <li><a href="team.html">Guru</a></li>
-                                        <li><a href="team-details.html">Info Guru</a></li>
-                                        <li><a href="zoom-meeting.html">Acara</a></li>
-                                        <li><a href="pricing.html">Harga</a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                            {/* single sized  footer end */}
                             <div className="container">
                                 <div className="section-inner">
                                     <div className="row">
@@ -79,6 +63,14 @@ const Footer = () => {
                         <div className="col-lg-12">
                             <div className="copyright-area-one">
                                 <p>Hak Cipta © 2024 Semua Hak Dilindungi oleh Kindbo Lab</p>
+                                <div className="social-media-area">
+                                    <ul className="social-media-area">
+                                        <li><a href="#"><i className="fa-brands fa-facebook"></i></a></li>
+                                        <li><a href="#"><i className="fa-brands fa-twitter"></i></a></li>
+                                        <li><a href="#"><i className="fa-brands fa-instagram"></i></a></li>
+                                        <li><a href="#"><i className="fa-brands fa-youtube"></i></a></li>
+                                    </ul>
+                                </div>
                             </div>
                         </div>
                     </div>

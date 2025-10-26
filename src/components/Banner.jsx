@@ -1,7 +1,10 @@
 
-import React from 'react';
+import React, { useState } from 'react';
+import { steps } from '../data/thematicServices';
 
 const Banner = () => {
+    const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+
     return (
         <section className="banner-area-one rts-shape-move">
             <div className="container">
@@ -16,7 +19,18 @@ const Banner = () => {
                                 <p className="disc">Selamat datang di Kindbo Lab di mana setiap hari membawa peluang baru untuk
                                     penemuan dan pertumbuhan. Komunitas kami yang dinamis berdedikasi.</p>
                                 <div className="banner-btn">
-                                    <a href="about.html" className="rts-btn btn-primary border-radius">Mulai Belajar Sekarang</a>
+                                    <div className="dropdown" onMouseEnter={() => setIsDropdownOpen(true)} onMouseLeave={() => setIsDropdownOpen(false)}>
+                                        <button className="rts-btn btn-primary border-radius">Mulai Belajar Sekarang</button>
+                                        {isDropdownOpen && (
+                                            <ul className="dropdown-menu show">
+                                                {steps.map((step, index) => (
+                                                    <li key={index}>
+                                                        <a className="dropdown-item" href={step.link} target="_blank" rel="noopener noreferrer">{step.title}</a>
+                                                    </li>
+                                                ))}
+                                            </ul>
+                                        )}
+                                    </div>
                                     <div className="video-btn-area">
                                         <div className="vedio-icone">
                                             <a className="video-play-button play-video popup-video" href="https://www.youtube.com/watch?v=ezbJwaLmOeM">

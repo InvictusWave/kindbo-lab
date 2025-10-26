@@ -1,26 +1,6 @@
 
 import React, { useState } from 'react';
-
-const steps = [
-    {
-        title: 'Layanan Tematik 1',
-        content: 'Deskripsi singkat tentang layanan tematik 1.',
-        image: 'assets/images/about/about-05.jpg',
-        link: 'https://forms.gle/example1',
-    },
-    {
-        title: 'Layanan Tematik 2',
-        content: 'Deskripsi singkat tentang layanan tematik 2.',
-        image: 'assets/images/about/about-04.png',
-        link: 'https://forms.gle/example2',
-    },
-    {
-        title: 'Layanan Tematik 3',
-        content: 'Deskripsi singkat tentang layanan tematik 3.',
-        image: 'assets/images/about/about-05.jpg',
-        link: 'https://forms.gle/example3',
-    },
-];
+import { steps } from '../data/thematicServices';
 
 const VerticalStepper = () => {
     const [activeStep, setActiveStep] = useState(0);
@@ -35,6 +15,15 @@ const VerticalStepper = () => {
         <section className="rts-vertical-stepper rts-section-gap">
             <div className="container">
                 <div className="row">
+                    <div className="col-lg-12">
+                        <div className="section-title-area text-center ">
+                            <p className="pre-title justify-content-center"><img src="assets/images/banner/title-img.svg" alt="" />Layanan</p>
+                            <h2 className="section-title">Layanan Tematik</h2>
+                            <p className="desc">Kami menawarkan berbagai layanan tematik yang dirancang untuk merangsang kreativitas, <br /> pengetahuan, dan keterampilan anak-anak melalui pendekatan yang menyenangkan dan edukatif.</p>
+                        </div>
+                    </div>
+                </div>
+                <div className="row g-5 pt-4">
                     <div className="col-lg-4 d-none d-lg-block">
                         <div className="stepper-wrapper">
                             {steps.map((step, index) => (
@@ -52,7 +41,7 @@ const VerticalStepper = () => {
                     <div className="col-lg-8 d-none d-lg-block">
                         <div className="stepper-content">
                             <div className="stepper-pane">
-                                <img src={steps[activeStep].image} alt={steps[activeStep].title} />
+                                <img src={steps[activeStep].image} alt={steps[activeStep].title} className={"rounded-3"} />
                                 <h2>{steps[activeStep].title}</h2>
                                 <p>{steps[activeStep].content}</p>
                                 <a href={steps[activeStep].link} className="rts-btn btn-primary border-radius fw-bolder" target="_blank" rel="noopener noreferrer">
