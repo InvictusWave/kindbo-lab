@@ -92,7 +92,7 @@ const Categories = () => {
                                         </div>
                                     </div>
                                     <div className="content">
-                                        <h5 className="title"><a href="course.html">Matematika</a></h5>
+                                        <h5 className="title"><a href="course.html">Math</a></h5>
                                     </div>
                                 </div>
                             </div>

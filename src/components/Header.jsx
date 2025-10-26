@@ -18,10 +18,10 @@ const Header = () => {
                                 <nav>
                                     <ul>
                                         <li style={{position: 'static'}}>
-                                            <a className="nav-link" href="#">Beranda</a>
+                                            <a className="nav-link fw-bold" href="#">Beranda</a>
                                         </li>
                                         <li style={{position: 'static'}}>
-                                            <a className="nav-link" href="#">Acara</a>
+                                            <a className="nav-link fw-bold" href="#">Acara</a>
                                         </li>
                                     </ul>
                                 </nav>
@@ -29,7 +29,7 @@ const Header = () => {
 
                             <div className="header-right-area-one">
                                 <div className="buttons-area">
-                                    <a href="contact.html" className="rts-btn btn-primary border-radius">Mulai Belajar</a>
+                                    <a href="contact.html" className="rts-btn btn-primary border-radius fw-bolder">Mulai Belajar</a>
                                 </div>
                                 <div className="menu-btn" id="menu-btn">
                                     <svg width="20" height="16" viewBox="0 0 20 16" fill="none" xmlns="http://www.w3.org/2000/svg">

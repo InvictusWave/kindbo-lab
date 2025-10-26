@@ -16,7 +16,7 @@ const Banner = () => {
                                 <p className="disc">Selamat datang di Kindbo Lab di mana setiap hari membawa peluang baru untuk
                                     penemuan dan pertumbuhan. Komunitas kami yang dinamis berdedikasi.</p>
                                 <div className="banner-btn">
-                                    <a href="about.html" className="rts-btn btn-primary border-radius">Jelajahi Sekarang</a>
+                                    <a href="about.html" className="rts-btn btn-primary border-radius">Mulai Belajar Sekarang</a>
                                     <div className="video-btn-area">
                                         <div className="vedio-icone">
                                             <a className="video-play-button play-video popup-video" href="https://www.youtube.com/watch?v=ezbJwaLmOeM">

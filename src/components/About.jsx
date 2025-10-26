@@ -66,12 +66,11 @@ const About = () => {
                                 <img className="shape-img2" src="assets/images/banner/shape/02.svg" alt="" />
                             </div>
                             <div className="right-side-content">
-                                <h2 className="heading-title">Cara Mendaftarkan Anak Anda
-                                    di Kelas Kami</h2>
+                                <h2 className="heading-title">Mengapa kami hadir</h2>
                                 <p className="desc">Mendaftarkan anak Anda di Kindbo Lab adalah proses yang sederhana dan mudah. Kami senang menyambut keluarga Anda ke dalam komunitas belajar kami yang dinamis.</p>
-                                <div className="button-area">
-                                    <a href="about.html" className="rts-btn">Kunjungi Sekarang <i className="fa-solid fa-arrow-right"></i></a>
-                                </div>
+                                {/*<div className="button-area">*/}
+                                {/*    <a href="about.html" className="rts-btn">Kunjungi Sekarang <i className="fa-solid fa-arrow-right"></i></a>*/}
+                                {/*</div>*/}
                             </div>
                         </div>
                         <div className="shape-image">

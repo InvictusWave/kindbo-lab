@@ -52,16 +52,16 @@
 @import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap");
 :root {
-  --color-primary: #FFD335;
-  --color-primary-2: #7763E5;
-  --color-primary-3: #FF6D1C;
-  --color-primary-4: #B54CCA;
-  --color-primary-5: #09A24F;
-  --color-primary-6: #C29663;
-  --color-primary-7: #FF4E41;
-  --color-primary-8: #20AD96;
-  --color-primary-9: #A89222;
-  --color-primary-10: #36348E;
+  --color-primary: #7BBE3A;
+  --color-primary-2: #F2E627;
+  --color-primary-3: #2E3C97;
+  --color-primary-4: #E83F3F;
+  --color-primary-5: #7BBE3A;
+  --color-primary-6: #F2E627;
+  --color-primary-7: #E83F3F;
+  --color-primary-8: #2E3C97;
+  --color-primary-9: #F2E627;
+  --color-primary-10: #2E3C97;
   --color-secondary: #1F1F25;
   --color-secondary-2: #110C2D;
   --color-body: #737477;
@@ -71,16 +71,16 @@
   --color-heading-1: #262626;
   --color-white:#fff;
   --color-success: #3EB75E;
-  --color-danger: #FF0003;
+  --color-danger: #E83F3F;
   --color-warning: #FF8F3C;
-  --color-info: #1BA2DB;
-  --color-facebook: #3B5997;
-  --color-twitter: #1BA1F2;
-  --color-youtube: #ED4141;
-  --color-linkedin: #0077B5;
-  --color-pinterest: #E60022;
+  --color-info: #2E3C97;
+  --color-facebook: #2E3C97;
+  --color-twitter: #2E3C97;
+  --color-youtube: #E83F3F;
+  --color-linkedin: #2E3C97;
+  --color-pinterest: #E83F3F;
   --color-instagram: #C231A1;
-  --color-vimeo: #00ADEF;
+  --color-vimeo: #2E3C97;
   --color-twitch: #6441A3;
   --color-discord: #7289da;
   --p-light: 300;
@@ -138,21 +138,7 @@ body {
   font-weight: var(--p-regular);
   position: relative;
 }
-@media only screen and (min-width: 992px) and (max-width: 1199px) {
-  body {
-    overflow: hidden;
-  }
-}
-@media only screen and (min-width: 768px) and (max-width: 991px) {
-  body {
-    overflow: hidden;
-  }
-}
-@media only screen and (max-width: 767px) {
-  body {
-    overflow: hidden;
-  }
-}
+
 body::before {
   content: "";
   width: 100%;
@@ -15138,7 +15124,7 @@ nav ul li a {
 }
 
 .banner-area-one {
-  background: linear-gradient(180deg, #A157FF 0%, #6B34C4 100%);
+  background: linear-gradient(180deg, #7BBE3A 0%, #2E3C97 100%);
   height: auto;
   display: flex;
   overflow: hidden;

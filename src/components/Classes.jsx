@@ -49,7 +49,7 @@ const Classes = () => {
                                         <img src="assets/images/icon/05.svg" alt="" />
                                     </div>
                                     <a href="program-details.html">
-                                        <h4 className="title">Taman Kanak-kanak</h4>
+                                        <h4 className="title">Taman Kanak²</h4>
                                     </a>
                                     <p className="period">( 3 - 4 tahun)</p>
                                     <p className="desc">Seorang balita adalah anak yang biasanya berusia antara 1 dan 3 tahun.</p>
