@@ -1,5 +1,6 @@
 
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const Header = () => {
     return (
@@ -9,19 +10,19 @@ const Header = () => {
                     <div className="col-lg-12">
                         <div className="header-one-wrapper">
                             <div className="left-side-header">
-                                <a href="index.html" className="logo-area">
+                                <Link to="/" className="logo-area">
                                     <img src="assets/images/logo/logo-1.png" alt="logo" />
-                                </a>
+                                </Link>
                             </div>
 
                             <div className="main-nav-one">
                                 <nav>
                                     <ul>
                                         <li style={{position: 'static'}}>
-                                            <a className="nav-link fw-bold" href="#">Beranda</a>
+                                            <Link className="nav-link fw-bold" to="/">Beranda</Link>
                                         </li>
                                         <li style={{position: 'static'}}>
-                                            <a className="nav-link fw-bold" href="#">Acara</a>
+                                            <Link className="nav-link fw-bold" to="/events">Acara</Link>
                                         </li>
                                     </ul>
                                 </nav>

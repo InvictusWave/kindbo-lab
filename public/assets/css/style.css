@@ -16333,7 +16333,7 @@ nav ul li a {
 }
 
 .rts-breadcrumb-area {
-  background: url(../images/banner/breadcrumb-bg.jpg);
+  background-color: var(--color-primary-5);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -24908,4 +24908,6 @@ header.header-three .sub-dropdown .submenu.third-lvl.base {
   transform: translate(-52%, -48%);
   height: 51px;
 }
+
+
 /*# sourceMappingURL=../maps/style.css.map */

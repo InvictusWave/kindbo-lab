@@ -1,5 +1,6 @@
 
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const Sidebar = () => {
     return (
@@ -23,8 +24,10 @@ const Sidebar = () => {
                 <nav className="nav-main mainmenu-nav mt--30">
                     <ul className="mainmenu metismenu" id="mobile-menu-active">
                         <li>
-                            <a href="#" className="main">Beranda</a>
-                            <a href="#" className="main">Acara</a>
+                            <Link to="/" className="main">Beranda</Link>
+                        </li>
+                        <li>
+                            <Link to="/events" className="main">Acara</Link>
                         </li>
                     </ul>
                 </nav>
