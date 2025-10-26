@@ -23690,6 +23690,12 @@ a {
   transition: 0.7s 0.3s allcubic-bezier(0.1, 0.1, 0.1, 1);
 }
 
+.preloader.loaded {
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out 1s;
+    pointer-events: none;
+}
+
 @-webkit-keyframes spinner {
   to {
     -webkit-transform: rotateZ(360deg);
