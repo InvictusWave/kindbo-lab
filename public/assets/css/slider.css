@@ -1,0 +1,15 @@
+
+.swiper-pagination-progressbar {
+    background: rgba(0, 0, 0, 0.1);
+}
+
+.swiper-pagination-progressbar .swiper-pagination-progressbar-fill {
+    background: #7763E5;
+}
+
+.banner-right-img {
+    position: relative;
+    z-index: 2;
+    top: 70px;
+    left: -0px;
+}

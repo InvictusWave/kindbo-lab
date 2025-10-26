@@ -1,9 +1,23 @@
 
 import React, { useState } from 'react';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import 'swiper/css';
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
+import '../../public/assets/css/slider.css';
+import { Autoplay, Pagination } from 'swiper/modules';
 import { steps } from '../data/thematicServices';
 
 const Banner = () => {
     const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+
+    const images = [
+        "assets/images/banner/01.png",
+        "assets/images/banner/02.png",
+        "assets/images/banner/04.png",
+        "assets/images/banner/01.png",
+        "assets/images/banner/04.png",
+    ];
 
     return (
         <section className="banner-area-one rts-shape-move">
@@ -48,7 +62,24 @@ const Banner = () => {
                     </div>
                     <div className="col-lg-6 order-change order-lg-2 order-sm-1 order-1">
                         <div className="banner-right-img">
-                            <img src="assets/images/banner/01.png" width="672" alt="banner" />
+                            <Swiper
+                                pagination={{
+                                    type: 'progressbar',
+                                }}
+                                modules={[Pagination, Autoplay]}
+                                autoplay={{
+                                    delay: 2000,
+                                    disableOnInteraction: false,
+                                }}
+                                className="mySwiper-banner"
+                            >
+                                {images.map((image, index) => (
+                                    <SwiperSlide key={index}>
+                                        <img src={image} width="672" alt="banner" />
+                                    </SwiperSlide>
+                                ))}
+                            </Swiper>
+
                         </div>
                     </div>
                 </div>
