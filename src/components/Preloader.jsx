@@ -1,9 +1,19 @@
 
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 
 const Preloader = () => {
+    const [isLoaded, setIsLoaded] = useState(false);
+
+    useEffect(() => {
+        const timer = setTimeout(() => {
+            setIsLoaded(true);
+        }, 3000);
+
+        return () => clearTimeout(timer);
+    }, []);
+
     return (
-        <div id="preloader" className="preloader">
+        <div id="preloader" className={`preloader ${isLoaded ? 'loaded' : ''}`}>
             <div className="animation-preloader">
                 <div className="txt-loading">
                     <span data-text-preloader="K" className="letters-loading first">
