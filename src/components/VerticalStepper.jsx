@@ -5,7 +5,7 @@ const steps = [
     {
         title: 'Layanan Tematik 1',
         content: 'Deskripsi singkat tentang layanan tematik 1.',
-        image: 'assets/images/about/about-02.png',
+        image: 'assets/images/about/about-05.jpg',
         link: 'https://forms.gle/example1',
     },
     {
