@@ -1,0 +1,97 @@
+
+.rts-vertical-stepper .stepper-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.rts-vertical-stepper .stepper-item {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    padding: 17px 31px;
+    border-radius: 8px;
+    transition: background-color 0.3s;
+    font-weight: 700;
+    font-family: var(--font-secondary);
+    line-height: 1;
+    background: #f0f0f0;
+    color: var(--color-heading-1);
+    border-width: 2px 4px 4px 2px;
+    border-style: solid;
+    border-color: var(--color-heading-1);
+}
+
+.rts-vertical-stepper .stepper-item:hover {
+    background: #e0e0e0;
+}
+
+.rts-vertical-stepper .stepper-item.active {
+    background: var(--color-primary) !important;
+    color: var(--color-white);
+    border-color: var(--color-heading-1);
+}
+
+.rts-vertical-stepper .step-counter {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: var(--color-heading-1);
+    color: var(--color-white);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 15px;
+}
+
+.rts-vertical-stepper .stepper-item.active .step-counter {
+    background-color: var(--color-white);
+    color: var(--color-heading-1);
+}
+
+.rts-vertical-stepper .stepper-content img {
+    max-width: 100%;
+    margin-bottom: 20px;
+}
+
+@media (max-width: 991px) {
+    .rts-vertical-stepper .accordion-wrapper {
+        display: block;
+    }
+
+    .rts-vertical-stepper .accordion-item {
+        margin-bottom: 10px;
+    }
+
+    .rts-vertical-stepper .accordion-header {
+        background-color: #f0f0f0;
+        padding: 17px 31px;
+        cursor: pointer;
+        border-radius: 8px;
+        font-weight: 700;
+        font-family: var(--font-secondary);
+        line-height: 1;
+        color: var(--color-heading-1);
+        border-width: 2px 4px 4px 2px;
+        border-style: solid;
+        border-color: var(--color-heading-1);
+    }
+
+    .rts-vertical-stepper .accordion-header.active {
+        background-color: var(--color-primary);
+        color: var(--color-white);
+        border-color: var(--color-heading-1);
+    }
+
+    .rts-vertical-stepper .accordion-content {
+        padding: 15px;
+        border: 1px solid #f0f0f0;
+        border-top: none;
+        border-radius: 0 0 8px 8px;
+    }
+
+    .rts-vertical-stepper .accordion-content img {
+        max-width: 100%;
+        margin-bottom: 15px;
+    }
+}

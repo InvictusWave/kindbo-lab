@@ -6,6 +6,7 @@ import Classes from './components/Classes';
 import Categories from './components/Categories';
 import Team from './components/Team';
 import Events from './components/Events';
+import VerticalStepper from './components/VerticalStepper';
 import Testimonials from './components/Testimonials';
 import Footer from './components/Footer';
 import Preloader from './components/Preloader';
@@ -21,8 +22,9 @@ function App() {
             <About />
             <Classes />
             <Categories />
-            <Team />
+            {/*<Team />*/}
             <Events />
+            <VerticalStepper />
             <Testimonials />
             <Footer />
             <Preloader />
