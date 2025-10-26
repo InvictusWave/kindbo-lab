@@ -21,7 +21,7 @@ function App() {
             <Banner />
             <About />
             <Classes />
-            <Categories />
+            {/*<Categories />*/}
             {/*<Team />*/}
             <Events />
             <VerticalStepper />
