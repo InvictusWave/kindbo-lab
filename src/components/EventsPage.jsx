@@ -28,7 +28,11 @@ const EventsPage = () => {
 
     const totalPages = Math.ceil(sortedEvents.length / eventsPerPage);
 
-    const paginate = (pageNumber) => setCurrentPage(pageNumber);
+    const paginate = (pageNumber) => {
+        // Prevent paginating out of bounds
+        if (pageNumber < 1 || pageNumber > totalPages) return;
+        setCurrentPage(pageNumber);
+    };
 
     const handleDisplayModeChange = (mode) => {
         setDisplayMode(mode);
@@ -44,7 +48,7 @@ const EventsPage = () => {
     return (
         <>
             <div className="pt--100 pb--70 rts-breadcrumb-area">
-
+                {/* ... Breadcrumb content ... */}
             </div>
 
             <div className="rts-course-default-area rts-section-gap rts-shape-move">
@@ -54,6 +58,7 @@ const EventsPage = () => {
                             <div className="filter-small-top-full">
                                 <div className="left-filter">
                                     <span>Urutkan berdasarkan</span>
+                                    {/* Note: Template uses nice-select, make sure you have it imported if you use its class */}
                                     <select name="sort" value={sortCriteria} onChange={handleSortChange}>
                                         <option value="default">Default</option>
                                         <option value="title-asc">Judul (A-Z)</option>
@@ -66,8 +71,9 @@ const EventsPage = () => {
                                     <span>Menampilkan {indexOfFirstEvent + 1}-{indexOfLastEvent > sortedEvents.length ? sortedEvents.length : indexOfLastEvent} dari {sortedEvents.length} hasil</span>
                                     <ul className="nav nav-tabs" id="myTab" role="tablist">
                                         <li className="nav-item" role="presentation">
-                                            <button className={`nav-link ${displayMode === 'grid' ? 'active' : ''}`} onClick={() => handleDisplayModeChange('grid')} id="home-tab" data-bs-toggle="tab"
-                                                    data-bs-target="#home" type="button" role="tab" aria-controls="home"
+                                            {/* FIX: Removed data-bs-toggle and data-bs-target */}
+                                            <button className={`nav-link ${displayMode === 'grid' ? 'active' : ''}`} onClick={() => handleDisplayModeChange('grid')} id="home-tab"
+                                                    type="button" role="tab" aria-controls="home"
                                                     aria-selected={displayMode === 'grid'}>
                                                 <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
                                                      xmlns="http://www.w3.org/2000/svg">
@@ -79,8 +85,9 @@ const EventsPage = () => {
                                             </button>
                                         </li>
                                         <li className="nav-item" role="presentation">
-                                            <button className={`nav-link ${displayMode === 'list' ? 'active' : ''}`} onClick={() => handleDisplayModeChange('list')} id="profile-tab" data-bs-toggle="tab"
-                                                    data-bs-target="#profile" type="button" role="tab"
+                                            {/* FIX: Removed data-bs-toggle and data-bs-target */}
+                                            <button className={`nav-link ${displayMode === 'list' ? 'active' : ''}`} onClick={() => handleDisplayModeChange('list')} id="profile-tab"
+                                                    type="button" role="tab"
                                                     aria-controls="profile" aria-selected={displayMode === 'list'}>
                                                 <svg width="18" height="16" viewBox="0 0 18 16" fill="none"
                                                      xmlns="http://www.w3.org/2000/svg">
@@ -98,55 +105,27 @@ const EventsPage = () => {
                                 <div className={`tab-pane fade ${displayMode === 'grid' ? 'show active' : ''}`} id="home" role="tabpanel"
                                      aria-labelledby="home-tab">
                                     <div className="row g-5 mt--30">
+
+                                        {/* GRID VIEW - STRUCTURE FIXED */}
                                         {currentEvents.map((event, index) => (
                                             <div key={event.id} className="col-xl-3 col-lg-4 col-md-6 col-sm-6" data-category="transition">
                                                 {/* rts single course */}
                                                 <div className="course-wrapper-style-2 inner">
                                                     <div className={`wrapper-inner ${bgClasses[index % bgClasses.length]}`}>
                                                         <div className="image">
-                                                            <Link to={`/event-details/${event.id}`}><img
-                                                                src={event.image} alt={event.title}/></Link>
+                                                            <Link to={`/event-details/${event.id}`}>
+                                                                <img src={event.image} alt={event.title}/>
+                                                            </Link>
                                                         </div>
                                                         <div className="content">
                                                             <ul className="meta-wrapper">
                                                                 <li className="wrapper-list">
                                                                     <div className="icon">
-                                                                        <img src="assets/images/icon/13.svg" alt=""/>
+                                                                        <img src="assets/images/icon/12.svg" alt=""/>
                                                                     </div>
-                                                                    <p className="desc">{event.duration}</p>
-                                                                </li>
-                                                                <li className="wrapper-list">
-                                                                    <div className="icon">
-                                                                        <img src="assets/images/icon/14.svg" alt=""/>
-                                                                    </div>
-                                                                    <p className="desc">{event.date}</p>
+                                                                    <p className="desc">{event.category}</p>
                                                                 </li>
                                                             </ul>
-                                                            <h4 className="title">{event.title}</h4>
-                                                            <div className="bottom-wrapper">
-                                                            {/*    ini nanti button redirect ke url*/}
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                {/* rts single course end */}
-                                            </div>
-                                        ))}
-                                    </div>
-                                </div>
-                                <div className={`tab-pane fade ${displayMode === 'list' ? 'show active' : ''}`} id="profile" role="tabpanel"
-                                     aria-labelledby="profile-tab">
-                                    <div className="row g-5 mt--30">
-                                        {currentEvents.map((event, index) => (
-                                            <div key={event.id} className="col-lg-12">
-                                                {/* rts single course */}
-                                                <div className="course-wrapper-style-2 course-list-style inner">
-                                                    <div className={`wrapper-inner ${bgClasses[index % bgClasses.length]}`}>
-                                                        <div className="image">
-                                                            <Link to={`/event-details/${event.id}`}><img
-                                                                src={event.image} alt={event.title}/></Link>
-                                                        </div>
-                                                        <div className="content">
                                                             <ul className="meta-wrapper">
                                                                 <li className="wrapper-list">
                                                                     <div className="icon">
@@ -163,7 +142,7 @@ const EventsPage = () => {
                                                             </ul>
                                                             <h5 className="title">{event.title}</h5>
                                                             <div className="bottom-wrapper">
-                                                            {/*   button nanti*/}
+                                                                <a href="https://example.com/event-registration" target="_blank" rel="noopener noreferrer" className="rts-btn btn-primary border-radius fw-bolder">Daftar Event</a>
                                                             </div>
                                                         </div>
                                                     </div>
@@ -171,6 +150,57 @@ const EventsPage = () => {
                                                 {/* rts single course end */}
                                             </div>
                                         ))}
+
+                                    </div>
+                                </div>
+                                <div className={`tab-pane fade ${displayMode === 'list' ? 'show active' : ''}`} id="profile" role="tabpanel"
+                                     aria-labelledby="profile-tab">
+                                    <div className="row g-5 mt--30">
+
+                                        {/* LIST VIEW - ALREADY CORRECT STRUCTURE */}
+                                        {currentEvents.map((event, index) => (
+                                            <div key={event.id} className="col-lg-12">
+                                                {/* rts single course */}
+                                                <div className="course-wrapper-style-2 course-list-style inner">
+                                                    <div className={`wrapper-inner ${bgClasses[index % bgClasses.length]}`}>
+                                                        <div className="image">
+                                                            <Link to={`/event-details/${event.id}`}><img
+                                                                src={event.image} alt={event.title}/></Link>
+                                                        </div>
+                                                        <div className="content">
+                                                            <ul className="meta-wrapper">
+                                                                <li className="wrapper-list">
+                                                                    <div className="icon">
+                                                                        <img src="assets/images/icon/12.svg" alt=""/>
+                                                                    </div>
+                                                                    <p className="desc">{event.category}</p>
+                                                                </li>
+                                                            </ul>
+                                                            <ul className="meta-wrapper">
+                                                                <li className="wrapper-list">
+                                                                    <div className="icon">
+                                                                        <img src="assets/images/icon/13.svg" alt=""/>
+                                                                    </div>
+                                                                    <p className="desc">{event.duration}</p>
+                                                                </li>
+                                                                <li className="wrapper-list">
+                                                                    <div className="icon">
+                                                                        <img src="assets/images/icon/14.svg" alt=""/>
+                                                                    </div>
+                                                                    <p className="desc">{event.date}</p>
+                                                                </li>
+                                                            </ul>
+                                                            <h5 className="title">{event.title}</h5>
+                                                            <div className="bottom-wrapper">
+                                                                <a href="https://example.com/event-registration" target="_blank" rel="noopener noreferrer" className="rts-btn btn-primary border-radius fw-bolder">Daftar Event</a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                {/* rts single course end */}
+                                            </div>
+                                        ))}
+
                                     </div>
                                 </div>
                             </div>
@@ -181,10 +211,18 @@ const EventsPage = () => {
                     <div className="col-lg-12">
                         <div className="rts-pagination-area-2">
                             <ul>
-                                <li className="button">
-                                    <div className="inner"><a href="#" onClick={(e) => e.preventDefault()}><i className="fa-solid fa-chevron-left"></i></a>
+                                {/* FIX: Added logic and disabled class for Previous button */}
+                                <li className={`button ${currentPage === 1 ? 'disabled' : ''}`}>
+                                    <div className="inner">
+                                        <a href="#" onClick={(e) => {
+                                            e.preventDefault();
+                                            paginate(currentPage - 1);
+                                        }}>
+                                            <i className="fa-solid fa-chevron-left"></i>
+                                        </a>
                                     </div>
                                 </li>
+
                                 {[...Array(totalPages).keys()].map(number => (
                                     <li key={number + 1} className={currentPage === number + 1 ? 'active' : ''}>
                                         <a onClick={(e) => {
@@ -195,8 +233,16 @@ const EventsPage = () => {
                                         </a>
                                     </li>
                                 ))}
-                                <li className="button">
-                                    <div className="inner"><a href="#" onClick={(e) => e.preventDefault()}><i className="fa-solid fa-chevron-right"></i></a>
+
+                                {/* FIX: Added logic and disabled class for Next button */}
+                                <li className={`button ${currentPage === totalPages ? 'disabled' : ''}`}>
+                                    <div className="inner">
+                                        <a href="#" onClick={(e) => {
+                                            e.preventDefault();
+                                            paginate(currentPage + 1);
+                                        }}>
+                                            <i className="fa-solid fa-chevron-right"></i>
+                                        </a>
                                     </div>
                                 </li>
                             </ul>
