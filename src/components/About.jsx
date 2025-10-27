@@ -10,7 +10,7 @@ const About = ({ id }) => {
                         <div className="row align-items-center">
                             <div className="col-lg-6">
                                 <div className="about-image">
-                                    <img src="assets/images/about/about-01.png" width="630" alt="" />
+                                    <img src="assets/images/about/about-1.webp" width="630" alt="" />
                                 </div>
                             </div>
                             <div className="col-lg-6">
@@ -61,7 +61,7 @@ const About = ({ id }) => {
                         </div>
                         <div className="content-inner rts-shape-move">
                             <div className="image-area">
-                                <img src="assets/images/about/about-03.jpg" width="295" alt="" />
+                                <img src="assets/images/about/about-2.webp" width="295" alt="" />
                                 <img className="shape-img" src="assets/images/about/shape-01.png" alt="" />
                                 <img className="shape-img2" src="assets/images/banner/shape/02.svg" alt="" />
                             </div>
