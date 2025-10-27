@@ -1,10 +1,10 @@
 
 import React from 'react';
 
-const About = () => {
+const About = ({ id }) => {
     return (
         <>
-            <section className="rts-about-area rts-shape-move rts-section-gap">
+            <section id={id} className="rts-about-area rts-shape-move rts-section-gap">
                 <div className="container">
                     <div className="section-inner">
                         <div className="row align-items-center">

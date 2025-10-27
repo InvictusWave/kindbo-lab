@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 const Sidebar = () => {
     return (
         <div id="side-bar" className="side-bar header-two">
-            <button className="close-icon-menu"><i className="far fa-times"></i></button>
+            <button className="close-icon-menu bg-body"><i className="far fa-times"></i></button>
             {/* inner menu area desktop start */}
             <div className="inner-main-wrapper-desk">
                 <div className="inner-content">
@@ -24,7 +24,19 @@ const Sidebar = () => {
                 <nav className="nav-main mainmenu-nav mt--30">
                     <ul className="mainmenu metismenu" id="mobile-menu-active">
                         <li>
-                            <Link to="/" className="main">Beranda</Link>
+                            <Link to="/#beranda" className="main">Beranda</Link>
+                        </li>
+                        <li>
+                            <Link to="/#tentang-kami" className="main">Tentang Kami</Link>
+                        </li>
+                        <li>
+                            <Link to="/#kelas" className="main">Kelas</Link>
+                        </li>
+                        <li>
+                            <Link to="/#layanan-tematik" className="main">Layanan Tematik</Link>
+                        </li>
+                        <li>
+                            <Link to="/#kontak" className="main">Kontak</Link>
                         </li>
                         <li>
                             <Link to="/events" className="main">Acara</Link>

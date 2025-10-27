@@ -1,5 +1,5 @@
-import React from 'react';
-import { Routes, Route } from 'react-router-dom';
+import React, { useEffect } from 'react';
+import { Routes, Route, useLocation } from 'react-router-dom';
 import Header from './components/Header';
 import Banner from './components/Banner';
 import About from './components/About';
@@ -17,24 +17,50 @@ import EventsPage from './components/EventsPage';
 import HomeEvents from './components/HomeEvents';
 
 function App() {
+    const location = useLocation();
+
+    useEffect(() => {
+        const scrollToHash = () => {
+            if (location.hash) {
+                const id = location.hash.slice(1);
+                const elem = document.getElementById(id);
+                if (elem) {
+                    const headerOffset = document.querySelector('.header-one').offsetHeight;
+                    const elementPosition = elem.getBoundingClientRect().top + window.pageYOffset;
+                    const offsetPosition = elementPosition - headerOffset;
+
+                    window.scrollTo({ top: offsetPosition, behavior: 'smooth' });
+                } else {
+                    // If element not found, retry after a short delay
+                    requestAnimationFrame(scrollToHash);
+                }
+            } else {
+                window.scrollTo({ top: 0, left: 0, behavior: 'smooth' });
+            }
+        };
+
+        scrollToHash();
+    }, [location]);
+
     return (
         <>
             <Header />
             <Routes>
                 <Route path="/" element={
                     <>
-                        <Banner />
-                        <About />
-                        <Classes />
+                        <Banner id="beranda" />
+                        <About id="tentang-kami" />
+                        <Classes id="kelas" />
                         {/*<Categories />*/}
                         {/*<Team />*/}
-                        <VerticalStepper />
+                        <VerticalStepper id="layanan-tematik" />
                         <HomeEvents />
                         <Testimonials />
                     </>
                 } />
                 <Route path="/events" element={<EventsPage />} />
             </Routes>
+            <div id="kontak"></div>
             <Footer />
             <Preloader />
             <BackToTop />

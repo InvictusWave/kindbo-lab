@@ -1,9 +1,9 @@
 
 import React from 'react';
 
-const Classes = () => {
+const Classes = ({ id }) => {
     return (
-        <section className="rts-class-area">
+        <section id={id} className="rts-class-area">
             <div className="container">
                 <div className="section-title-area text-center">
                     <p className="pre-title justify-content-center"><img src="assets/images/banner/title-img.svg" alt="" />Kelas</p>

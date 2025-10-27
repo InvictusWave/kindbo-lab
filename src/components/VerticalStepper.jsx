@@ -2,7 +2,7 @@
 import React, { useState } from 'react';
 import { steps } from '../data/thematicServices';
 
-const VerticalStepper = () => {
+const VerticalStepper = ({ id }) => {
     const [activeStep, setActiveStep] = useState(0);
 
     const handleStepClick = (index) => {
@@ -12,7 +12,7 @@ const VerticalStepper = () => {
     };
 
     return (
-        <section className="rts-vertical-stepper rts-section-gap">
+        <section id={id} className="rts-vertical-stepper rts-section-gap">
             <div className="container">
                 <div className="row">
                     <div className="col-lg-12">

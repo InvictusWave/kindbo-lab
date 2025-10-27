@@ -19,7 +19,19 @@ const Header = () => {
                                 <nav>
                                     <ul>
                                         <li style={{position: 'static'}}>
-                                            <Link className="nav-link fw-bold" to="/">Beranda</Link>
+                                            <Link className="nav-link fw-bold" to="/#beranda">Beranda</Link>
+                                        </li>
+                                        <li style={{position: 'static'}}>
+                                            <Link className="nav-link fw-bold" to="/#tentang-kami">Tentang Kami</Link>
+                                        </li>
+                                        <li style={{position: 'static'}}>
+                                            <Link className="nav-link fw-bold" to="/#kelas">Kelas</Link>
+                                        </li>
+                                        <li style={{position: 'static'}}>
+                                            <Link className="nav-link fw-bold" to="/#layanan-tematik">Layanan Tematik</Link>
+                                        </li>
+                                        <li style={{position: 'static'}}>
+                                            <Link className="nav-link fw-bold" to="/#kontak">Kontak</Link>
                                         </li>
                                         <li style={{position: 'static'}}>
                                             <Link className="nav-link fw-bold" to="/events">Acara</Link>

@@ -9,7 +9,7 @@ import { Autoplay, Pagination } from 'swiper/modules';
 import { steps } from '../data/thematicServices';
 import { contentfulClient } from '../utils/contentfulClient';
 
-const Banner = () => {
+const Banner = ({ id }) => {
     const [isDropdownOpen, setIsDropdownOpen] = useState(false);
     const [bannerImages, setBannerImages] = useState([]);
     const [loading, setLoading] = useState(true);
@@ -43,7 +43,7 @@ const Banner = () => {
     }
 
     return (
-        <section className="banner-area-one rts-shape-move">
+        <section id={id} className="banner-area-one rts-shape-move">
             <div className="container">
                 <div className="row">
                     <div className="col-lg-6 order-xl-1 order-lg-1 order-sm-2 order-2">
@@ -91,7 +91,7 @@ const Banner = () => {
                                 }}
                                 modules={[Pagination, Autoplay]}
                                 autoplay={{
-                                    delay: 3000,
+                                    delay: 4000,
                                     disableOnInteraction: false,
                                 }}
                                 className="mySwiper-banner"
