@@ -1,7 +1,39 @@
 
-import React from 'react';
+import React, { useState } from 'react';
+import HCaptcha from '@hcaptcha/react-hcaptcha';
 
 const Footer = () => {
+    const [result, setResult] = useState("");
+    const [hCaptchaToken, setHCaptchaToken] = useState(null);
+
+    const onSubmit = async (event) => {
+        event.preventDefault();
+        const formData = new FormData(event.target);
+        formData.append("access_key", "26a10ed0-0f57-44c7-ba00-7a5a915736f5");
+        // Ensure only h-captcha-response is sent, remove g-recaptcha-response if present
+        if (formData.has("g-recaptcha-response")) {
+            formData.delete("g-recaptcha-response");
+        }
+        if (hCaptchaToken) {
+            formData.append("h-captcha-response", hCaptchaToken);
+        } else {
+            setResult("Mohon selesaikan verifikasi hCaptcha.");
+            return;
+        }
+
+        const response = await fetch("https://api.web3forms.com/submit", {
+            method: "POST",
+            body: formData
+        });
+
+        const data = await response.json();
+        setResult(data.success ? "Terima kasih! Pesan Anda telah terkirim dengan sukses. Kami akan segera menghubungi Anda!" : "Gagal mengirim pesan. Silakan coba lagi nanti.");
+    };
+
+    const onHCaptchaChange = (token) => {
+        setHCaptchaToken(token);
+    };
+
     return (
         <div className="rts-footer-area section-bg">
             <div className="container">
@@ -32,20 +64,27 @@ const Footer = () => {
                                 <div className="section-inner">
                                     <div className="row">
                                         <div >
-                                            <form action="#" className="contact-form">
+                                            <form onSubmit={onSubmit} className="contact-form">
                                                 <div className="form-inner">
                                                     <div className="single-input">
-                                                        <input type="text" name="Name" placeholder="Nama Anda" required />
+                                                        <input type="text" name="name" placeholder="Nama Anda" required />
                                                     </div>
                                                     <div className="single-input">
-                                                        <input type="email" name="Email" placeholder="Alamat Email" required />
+                                                        <input type="email" name="email" placeholder="Alamat Email" required />
                                                     </div>
                                                     <div className="single-input message">
-                                                        <textarea name="Message" placeholder="Pesan" required></textarea>
+                                                        <textarea name="message" placeholder="Pesan" required></textarea>
+                                                    </div>
+                                                    <div className="h-captcha" data-captcha="true">
+                                                        <HCaptcha
+                                                            sitekey="50b2fe65-b00b-4b9e-ad62-3ba471098be2"
+                                                            onVerify={onHCaptchaChange}
+                                                        />
                                                     </div>
                                                     <div className="form-btn">
                                                         <button type="submit" className="rts-btn btn-primary">Kirim Pesan</button>
                                                     </div>
+                                                    <p style={{ color: result.includes("sukses") ? 'green' : 'red', fontWeight: 'bold', marginTop: '10px' }}>{result}</p>
                                                 </div>
                                             </form>
                                         </div>

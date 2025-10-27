@@ -10,6 +10,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@hcaptcha/react-hcaptcha": "^1.14.0",
     "contentful": "^11.8.7",
     "process": "^0.11.10",
     "react": "^19.1.1",

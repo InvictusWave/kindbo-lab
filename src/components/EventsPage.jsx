@@ -1,12 +1,20 @@
-import React, {useState} from 'react';
-import {events} from '../data/eventsData';
-import {Link} from 'react-router-dom';
+import React, {useState, useEffect} from 'react';
+import {fetchEvents} from '../utils/contentfulClient';
 
 const EventsPage = () => {
+    const [events, setEvents] = useState([]);
     const [currentPage, setCurrentPage] = useState(1);
     const [displayMode, setDisplayMode] = useState('grid'); // 'grid' or 'list'
     const [sortCriteria, setSortCriteria] = useState('default'); // e.g., 'default', 'title-asc', 'title-desc', 'category-asc', 'category-desc'
     const eventsPerPage = 8;
+
+    useEffect(() => {
+        const getEvents = async () => {
+            const fetchedEvents = await fetchEvents();
+            setEvents(fetchedEvents);
+        };
+        getEvents();
+    }, []);
 
     // Apply sorting before pagination
     const sortedEvents = [...events].sort((a, b) => {
@@ -102,22 +110,22 @@ const EventsPage = () => {
                                 </div>
                             </div>
                             <div className="tab-content" id="myTabContent">
-                                <div className={`tab-pane fade ${displayMode === 'grid' ? 'show active' : ''}`} id="home" role="tabpanel"
-                                     aria-labelledby="home-tab">
-                                    <div className="row g-5 mt--30">
+                                {events.length > 0 ? (
+                                    <>
+                                        <div className={`tab-pane fade ${displayMode === 'grid' ? 'show active' : ''}`} id="home" role="tabpanel"
+                                             aria-labelledby="home-tab">
+                                            <div className="row g-5 mt--30">
 
-                                        {/* GRID VIEW - STRUCTURE FIXED */}
-                                        {currentEvents.map((event, index) => (
-                                            <div key={event.id} className="col-xl-3 col-lg-4 col-md-6 col-sm-6" data-category="transition">
-                                                {/* rts single course */}
-                                                <div className="course-wrapper-style-2 inner">
-                                                    <div className={`wrapper-inner ${bgClasses[index % bgClasses.length]}`}>
-                                                        <div className="image">
-                                                            <Link to={`/event-details/${event.id}`}>
-                                                                <img src={event.image} alt={event.title}/>
-                                                            </Link>
-                                                        </div>
-                                                        <div className="content">
+                                                {/* GRID VIEW - STRUCTURE FIXED */}
+                                                {currentEvents.map((event, index) => (
+                                                    <div key={event.id} className="col-xl-3 col-lg-4 col-md-6 col-sm-6" data-category="transition">
+                                                        {/* rts single course */}
+                                                        <div className="course-wrapper-style-2 inner">
+                                                            <div className={`wrapper-inner ${bgClasses[index % bgClasses.length]}`}>
+                                                                <div className="image">
+                                                                    <img src={event.image} alt={event.title}/>
+                                                                </div>
+                                                                <div className="content">
                                                             <ul className="meta-wrapper">
                                                                 <li className="wrapper-list">
                                                                     <div className="icon">
@@ -140,34 +148,33 @@ const EventsPage = () => {
                                                                     <p className="desc">{event.date}</p>
                                                                 </li>
                                                             </ul>
-                                                            <h5 className="title">{event.title}</h5>
+                                                            <h4 className="title">{event.title}</h4>
                                                             <div className="bottom-wrapper">
-                                                                <a href="https://example.com/event-registration" target="_blank" rel="noopener noreferrer" className="rts-btn btn-primary border-radius fw-bolder">Daftar Event</a>
+                                                                <a href={event.link} target="_blank" rel="noopener noreferrer" className="rts-btn btn-primary border-radius fw-bolder">Daftar Event</a>
                                                             </div>
                                                         </div>
-                                                    </div>
-                                                </div>
-                                                {/* rts single course end */}
-                                            </div>
-                                        ))}
-
-                                    </div>
-                                </div>
-                                <div className={`tab-pane fade ${displayMode === 'list' ? 'show active' : ''}`} id="profile" role="tabpanel"
-                                     aria-labelledby="profile-tab">
-                                    <div className="row g-5 mt--30">
-
-                                        {/* LIST VIEW - ALREADY CORRECT STRUCTURE */}
-                                        {currentEvents.map((event, index) => (
-                                            <div key={event.id} className="col-lg-12">
-                                                {/* rts single course */}
-                                                <div className="course-wrapper-style-2 course-list-style inner">
-                                                    <div className={`wrapper-inner ${bgClasses[index % bgClasses.length]}`}>
-                                                        <div className="image">
-                                                            <Link to={`/event-details/${event.id}`}><img
-                                                                src={event.image} alt={event.title}/></Link>
+                                                            </div>
                                                         </div>
-                                                        <div className="content">
+                                                        {/* rts single course end */}
+                                                    </div>
+                                                ))}
+
+                                            </div>
+                                        </div>
+                                        <div className={`tab-pane fade ${displayMode === 'list' ? 'show active' : ''}`} id="profile" role="tabpanel"
+                                             aria-labelledby="profile-tab">
+                                            <div className="row g-5 mt--30">
+
+                                                {/* LIST VIEW - ALREADY CORRECT STRUCTURE */}
+                                                {currentEvents.map((event, index) => (
+                                                    <div key={event.id} className="col-lg-12">
+                                                        {/* rts single course */}
+                                                        <div className="course-wrapper-style-2 course-list-style inner">
+                                                            <div className={`wrapper-inner ${bgClasses[index % bgClasses.length]}`}>
+                                                                <div className="image">
+                                                                    <img src={event.image} alt={event.title}/>
+                                                                </div>
+                                                                <div className="content">
                                                             <ul className="meta-wrapper">
                                                                 <li className="wrapper-list">
                                                                     <div className="icon">
@@ -190,19 +197,23 @@ const EventsPage = () => {
                                                                     <p className="desc">{event.date}</p>
                                                                 </li>
                                                             </ul>
-                                                            <h5 className="title">{event.title}</h5>
+                                                            <h4 className="title">{event.title}</h4>
                                                             <div className="bottom-wrapper">
-                                                                <a href="https://example.com/event-registration" target="_blank" rel="noopener noreferrer" className="rts-btn btn-primary border-radius fw-bolder">Daftar Event</a>
+                                                                <a href={event.link} target="_blank" rel="noopener noreferrer" className="rts-btn btn-primary border-radius fw-bolder">Daftar Event</a>
                                                             </div>
                                                         </div>
+                                                            </div>
+                                                        </div>
+                                                        {/* rts single course end */}
                                                     </div>
-                                                </div>
-                                                {/* rts single course end */}
-                                            </div>
-                                        ))}
+                                                ))}
 
-                                    </div>
-                                </div>
+                                            </div>
+                                        </div>
+                                    </>
+                                ) : (
+                                    <p>Belum ada Acara untuk saat ini.</p>
+                                )}
                             </div>
                         </div>
                     </div>
