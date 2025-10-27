@@ -1,5 +1,5 @@
 
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/navigation';
@@ -7,17 +7,40 @@ import 'swiper/css/pagination';
 import '../../public/assets/css/slider.css';
 import { Autoplay, Pagination } from 'swiper/modules';
 import { steps } from '../data/thematicServices';
+import { contentfulClient } from '../utils/contentfulClient';
 
 const Banner = () => {
     const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+    const [bannerImages, setBannerImages] = useState([]);
+    const [loading, setLoading] = useState(true);
+    const [error, setError] = useState(null);
 
-    const images = [
-        "assets/images/banner/01.png",
-        "assets/images/banner/02.png",
-        "assets/images/banner/04.png",
-        "assets/images/banner/01.png",
-        "assets/images/banner/04.png",
-    ];
+    useEffect(() => {
+        const fetchBannerImages = async () => {
+            try {
+                const response = await contentfulClient.getEntries({
+                    content_type: 'heroSection',
+                    select: 'fields.image'
+                });
+                const images = response.items.map(item => item.fields.image.fields.file.url);
+                setBannerImages(images);
+                setLoading(false);
+            } catch (err) {
+                setError(err);
+                setLoading(false);
+            }
+        };
+
+        fetchBannerImages();
+    }, []);
+
+    if (loading) {
+        return <div>Loading banner images...</div>;
+    }
+
+    if (error) {
+        return <div>Error loading banner images: {error.message}</div>;
+    }
 
     return (
         <section className="banner-area-one rts-shape-move">
@@ -68,12 +91,12 @@ const Banner = () => {
                                 }}
                                 modules={[Pagination, Autoplay]}
                                 autoplay={{
-                                    delay: 2000,
+                                    delay: 3000,
                                     disableOnInteraction: false,
                                 }}
                                 className="mySwiper-banner"
                             >
-                                {images.map((image, index) => (
+                                {bannerImages.map((image, index) => (
                                     <SwiperSlide key={index}>
                                         <img src={image} width="672" alt="banner" />
                                     </SwiperSlide>
