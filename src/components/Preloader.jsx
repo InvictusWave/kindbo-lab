@@ -25,6 +25,9 @@ const Preloader = () => {
                     <span data-text-preloader="N" className="letters-loading first">
                         N
                     </span>
+                    <span data-text-preloader="D" className="letters-loading first">
+                        D
+                    </span>
                     <span data-text-preloader="B" className="letters-loading first">
                         B
                     </span>
