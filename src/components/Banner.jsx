@@ -98,7 +98,7 @@ const Banner = ({ id }) => {
                             >
                                 {bannerImages.map((image, index) => (
                                     <SwiperSlide key={index}>
-                                        <img src={image} width="672" alt="banner" />
+                                        <img src={image} width="672" height="378" alt="banner" />
                                     </SwiperSlide>
                                 ))}
                             </Swiper>
