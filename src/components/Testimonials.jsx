@@ -61,7 +61,7 @@ const Testimonials = () => {
                                                 <li><a href="#"><i className="fa-sharp fa-solid fa-star"></i></a></li>
                                                 <li><a href="#"><i className="fa-sharp fa-solid fa-star"></i></a></li>
                                                 <li><a href="#"><i className="fa-sharp fa-solid fa-star"></i></a></li>
-                                                <li><a href="#"><i className="fa-light fa-star"></i></a></li>
+                                                <li><a href="#"><i className="fa-sharp fa-solid fa-star"></i></a></li>
                                             </ul>
                                         </div>
                                         <div className="testimonials-shape-image">
@@ -88,7 +88,7 @@ const Testimonials = () => {
                                                 <li><a href="#"><i className="fa-sharp fa-solid fa-star"></i></a></li>
                                                 <li><a href="#"><i className="fa-sharp fa-solid fa-star"></i></a></li>
                                                 <li><a href="#"><i className="fa-sharp fa-solid fa-star"></i></a></li>
-                                                <li><a href="#"><i className="fa-light fa-star"></i></a></li>
+                                                <li><a href="#"><i className="fa-sharp fa-solid fa-star"></i></a></li>
                                             </ul>
                                         </div>
                                         <div className="testimonials-shape-image">
@@ -115,7 +115,7 @@ const Testimonials = () => {
                                                 <li><a href="#"><i className="fa-sharp fa-solid fa-star"></i></a></li>
                                                 <li><a href="#"><i className="fa-sharp fa-solid fa-star"></i></a></li>
                                                 <li><a href="#"><i className="fa-sharp fa-solid fa-star"></i></a></li>
-                                                <li><a href="#"><i className="fa-light fa-star"></i></a></li>
+                                                <li><a href="#"><i className="fa-sharp fa-solid fa-star"></i></a></li>
                                             </ul>
                                         </div>
                                         <div className="testimonials-shape-image">
