@@ -18,8 +18,9 @@ const VerticalStepper = ({ id }) => {
                     <div className="col-lg-12">
                         <div className="section-title-area text-center ">
                             <p className="pre-title justify-content-center"><img src="assets/images/banner/title-img.svg" alt="" />Layanan</p>
-                            <h2 className="section-title">Layanan Tematik</h2>
-                            <p className="desc">Kami menawarkan berbagai layanan tematik yang dirancang untuk merangsang kreativitas, <br /> pengetahuan, dan keterampilan anak-anak melalui pendekatan yang menyenangkan dan edukatif.</p>
+                            <h2 className="section-title">Petualangan Tematik</h2>
+                            <p className="desc">Setiap tema di KindboLab adalah petualangan baru untuk anak — tempat di mana rasa ingin tahu berubah menjadi pengalaman bermakna.
+                                Karena di KindboLab, belajar bukan tentang hafalan, tapi tentang keberanian mencoba dan kegembiraan menemukan.</p>
                         </div>
                     </div>
                 </div>

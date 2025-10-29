@@ -11,7 +11,7 @@ const Header = () => {
                         <div className="header-one-wrapper">
                             <div className="left-side-header">
                                 <Link to="/" className="logo-area">
-                                    <img src="assets/images/logo/logo-1.png" alt="logo" />
+                                    <img src="assets/images/logo/logo-1.webp" alt="logo" style={{maxHeight: '80px'}} />
                                 </Link>
                             </div>
 
@@ -42,7 +42,7 @@ const Header = () => {
 
                             <div className="header-right-area-one">
                                 <div className="buttons-area">
-                                    <a href="contact.html" className="rts-btn btn-primary border-radius fw-bolder">Mulai Belajar</a>
+                                    <a href="/#layanan-tematik" className="rts-btn btn-primary border-radius fw-bolder">Mulai Belajar</a>
                                 </div>
                                 <div className="menu-btn" id="menu-btn">
                                     <svg width="20" height="16" viewBox="0 0 20 16" fill="none" xmlns="http://www.w3.org/2000/svg">

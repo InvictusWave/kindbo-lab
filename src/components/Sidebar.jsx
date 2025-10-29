@@ -50,24 +50,24 @@ const Sidebar = () => {
 
                 <div className="rts-social-style-one pl--20 mt--50">
                     <ul>
-                        <li>
+                        {/* <li>
                             <a href="#">
                                 <i className="fa-brands fa-facebook-f"></i>
                             </a>
-                        </li>
-                        <li>
+                        </li> */}
+                        {/* <li>
                             <a href="#">
                                 <i className="fa-brands fa-twitter"></i>
                             </a>
-                        </li>
+                        </li> */}
                         <li>
-                            <a href="#">
+                            <a href="/empty-state" target="_blank" rel="noopener noreferrer">
                                 <i className="fa-brands fa-youtube"></i>
                             </a>
                         </li>
                         <li>
-                            <a href="#">
-                                <i className="fa-brands fa-linkedin-in"></i>
+                            <a href="https://www.instagram.com/kindbolab/" target="_blank" rel="noopener noreferrer">
+                                <i className="fa-brands fa-instagram"></i>
                             </a>
                         </li>
                     </ul>

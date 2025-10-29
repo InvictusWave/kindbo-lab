@@ -50,11 +50,10 @@ const Banner = ({ id }) => {
                         <div className="banner-content-one">
                             <div className="inner">
                                 <h1 className="title-banner">
-                                    Temukan Keajaiban <br /> Belajar di <span>Kindbo Lab</span>
+                                    Temukan Keajaiban Belajar dan Berkreasi di Kindbo Lab
                                     <img src="assets/images/banner/title-shape-1.svg" alt="banner" />
                                 </h1>
-                                <p className="disc">Selamat datang di Kindbo Lab di mana setiap hari membawa peluang baru untuk
-                                    penemuan dan pertumbuhan. Komunitas kami yang dinamis berdedikasi.</p>
+                                <p className="disc">Selamat datang di KindboLab — tempat anak-anak mengeksplorasi dunia dengan rasa ingin tahu, imajinasi, dan semangat berkarya. Setiap kegiatan adalah pengalaman baru untuk tumbuh, mencoba, dan menemukan hal menakjubkan setiap hari.</p>
                                 <div className="banner-btn">
                                     <div className="dropdown" onMouseEnter={() => setIsDropdownOpen(true)} onMouseLeave={() => setIsDropdownOpen(false)}>
                                         <button className="rts-btn btn-primary border-radius">Mulai Belajar Sekarang</button>
@@ -70,14 +69,14 @@ const Banner = ({ id }) => {
                                     </div>
                                     <div className="video-btn-area">
                                         <div className="vedio-icone">
-                                            <a className="video-play-button play-video popup-video" href="https://www.youtube.com/watch?v=ezbJwaLmOeM">
+                                            <a className="video-play-button play-video popup-video" href="/empty-state">
                                                 <span className="icon"><img src="assets/images/banner/play.svg" alt="" /></span>
                                             </a>
                                             <div className="video-overlay">
                                                 <a className="video-overlay-close">×</a>
                                             </div>
                                         </div>
-                                        <p className="intro">Tonton Video</p>
+                                        <p className="intro">Video Edukasi</p>
                                     </div>
                                 </div>
                             </div>

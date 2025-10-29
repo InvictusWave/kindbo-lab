@@ -15,6 +15,7 @@ import LoginModal from './components/LoginModal';
 import Sidebar from './components/Sidebar';
 import EventsPage from './components/EventsPage';
 import HomeEvents from './components/HomeEvents';
+import EmptyState from './components/EmptyState';
 
 function App() {
     const location = useLocation();
@@ -59,6 +60,7 @@ function App() {
                     </>
                 } />
                 <Route path="/events" element={<EventsPage />} />
+                <Route path="/empty-state" element={<EmptyState />} />
             </Routes>
             <div id="kontak"></div>
             <Footer />

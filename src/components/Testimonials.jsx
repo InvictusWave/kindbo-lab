@@ -1,4 +1,3 @@
-
 import React from 'react';
 
 const Testimonials = () => {
@@ -8,7 +7,8 @@ const Testimonials = () => {
                 <div className="section-title-area text-center">
                     <p className="pre-title justify-content-center"><img src="assets/images/banner/title-img.svg" alt="" />Testimoni</p>
                     <h2 className="section-title">Apa Kata Orang Tua Tentang Kami</h2>
-                    <p className="desc">Keberhasilan dan kebahagiaan siswa kami adalah inti <br /> dari semua yang kami lakukan. Tapi jangan hanya mengambil kata-kata kami</p>
+                    <p className="desc">Setiap senyum, tawa, dan cerita dari anak-anak berarti banyak bagi kami. <br/>
+                        Berikut cerita dan kesan para orang tua tentang pengalaman anak mereka bersama KindboLab.</p>
                 </div>
                 <div className="slider-inner">
                     <div className="swiper mySwiper-category-1 swiper-data" data-swiper='{
@@ -44,15 +44,18 @@ const Testimonials = () => {
                                 "spaceBetween":30}
                             }
                         }'>
+
+                        {/* 👇 Wrapper untuk semua slide 👇 */}
                         <div className="swiper-wrapper">
-                            {/* single swiper style */}
+
+                            {/* --- Slide 1: Ibu Rani --- */}
                             <div className="swiper-slide">
                                 <div className="testimonials-wrapper">
                                     <div className="wrapper-inner">
                                         <div className="content">
-                                            <h4 className="author">David John</h4>
-                                            <p className="desig">Seniman dan Instruktur</p>
-                                            <p className="desc">Saya akan sangat merekomendasikan Michael Richard kepada siapa pun yang tertarik dengan materi pelajaran. Ini telah memberi saya pengetahuan yang tak ternilai & hasrat baru untuk topik tersebut.</p>
+                                            <h4 className="author">Ibu Rani, orang tua Aira (5 tahun)</h4>
+                                            <p className="desig"></p>
+                                            <p className="desc">Awalnya anak saya pemalu dan sulit fokus, tapi setelah ikut program di KindboLab, dia jadi lebih berani mencoba hal baru. Sekarang setiap minggu dia selalu tanya, ‘Kapan ke Kindbo lagi?’ 😊</p>
                                             <ul className="star-rating-area">
                                                 <li><a href="#"><i className="fa-sharp fa-solid fa-star"></i></a></li>
                                                 <li><a href="#"><i className="fa-sharp fa-solid fa-star"></i></a></li>
@@ -69,13 +72,71 @@ const Testimonials = () => {
                                     </div>
                                 </div>
                             </div>
-                            {/* single swiper style */}
+                            {/* --- Akhir Slide 1 --- */}
+
+                            {/* --- Slide 2: Pak Dimas --- */}
+                            <div className="swiper-slide">
+                                <div className="testimonials-wrapper">
+                                    <div className="wrapper-inner">
+                                        <div className="content">
+                                            <h4 className="author">Pak Dimas, ayah dari Nara (6 tahun)</h4>
+                                            <p className="desig"></p>
+                                            <p className="desc">Saya suka sekali konsep KindboLab yang tidak memaksa anak belajar, tapi justru membuat mereka penasaran. Anak saya jadi sering cerita sendiri tentang apa yang dia temukan di kelas tematiknya.</p>
+                                            {/* Saya gunakan rating yang sama untuk konsistensi */}
+                                            <ul className="star-rating-area">
+                                                <li><a href="#"><i className="fa-sharp fa-solid fa-star"></i></a></li>
+                                                <li><a href="#"><i className="fa-sharp fa-solid fa-star"></i></a></li>
+                                                <li><a href="#"><i className="fa-sharp fa-solid fa-star"></i></a></li>
+                                                <li><a href="#"><i className="fa-sharp fa-solid fa-star"></i></a></li>
+                                                <li><a href="#"><i className="fa-light fa-star"></i></a></li>
+                                            </ul>
+                                        </div>
+                                        <div className="testimonials-shape-image">
+                                            <div className="shape one"><img src="assets/images/banner/shape/13.svg" alt="shape_image" /></div>
+                                            <div className="shape two"><img src="assets/images/banner/shape/14.svg" alt="shape_image" /></div>
+                                            <div className="shape three"><img src="assets/images/banner/shape/15.svg" alt="shape_image" /></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            {/* --- Akhir Slide 2 --- */}
+
+                            {/* --- Slide 3: Ibu Sari --- */}
+                            <div className="swiper-slide">
+                                <div className="testimonials-wrapper">
+                                    <div className="wrapper-inner">
+                                        <div className="content">
+                                            <h4 className="author">Ibu Sari, orang tua Livia (4 tahun)</h4>
+                                            <p className="desig"></p>
+                                            <p className="desc">Yang saya suka, kegiatan di KindboLab bisa dinikmati bareng anak. Kami jadi punya waktu berkualitas sambil belajar hal baru bersama.</p>
+                                            {/* Saya gunakan rating yang sama untuk konsistensi */}
+                                            <ul className="star-rating-area">
+                                                <li><a href="#"><i className="fa-sharp fa-solid fa-star"></i></a></li>
+                                                <li><a href="#"><i className="fa-sharp fa-solid fa-star"></i></a></li>
+                                                <li><a href="#"><i className="fa-sharp fa-solid fa-star"></i></a></li>
+                                                <li><a href="#"><i className="fa-sharp fa-solid fa-star"></i></a></li>
+                                                <li><a href="#"><i className="fa-light fa-star"></i></a></li>
+                                            </ul>
+                                        </div>
+                                        <div className="testimonials-shape-image">
+                                            <div className="shape one"><img src="assets/images/banner/shape/13.svg" alt="shape_image" /></div>
+                                            <div className="shape two"><img src="assets/images/banner/shape/14.svg" alt="shape_image" /></div>
+                                            <div className="shape three"><img src="assets/images/banner/shape/15.svg" alt="shape_image" /></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            {/* --- Akhir Slide 3 --- */}
+
                         </div>
+                        {/* --- Akhir swiper-wrapper --- */}
                     </div>
+
+                    {/* --- Tombol Navigasi (Sama seperti sebelumnya) --- */}
                     <div className="swiper-btn swiper-button-next3">
                         <div className="inner">
                             <svg width="11" height="20" viewBox="0 0 11 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M1.6918 20C1.80148 20.0006 1.91019 19.9796 2.01173 19.9381C2.11326 19.8967 2.2056 19.8356 2.28347 19.7583L9.0918 12.95C9.47983 12.5629 9.78769 12.1032 9.99774 11.5969C10.2078 11.0907 10.3159 10.5481 10.3159 10C10.3159 9.45194 10.2078 8.90926 9.99774 8.40305C9.78769 7.89685 9.47983 7.43705 9.0918 7.05L2.28347 0.241678C2.20577 0.163979 2.11353 0.102345 2.01201 0.0602948C1.91049 0.0182446 1.80169 -0.00339842 1.6918 -0.00339842C1.58192 -0.00339842 1.47311 0.0182446 1.3716 0.0602948C1.27008 0.102345 1.17784 0.163979 1.10014 0.241678C1.02244 0.319376 0.960803 0.411618 0.918753 0.513136C0.876703 0.614655 0.85506 0.723461 0.85506 0.833344C0.85506 0.943226 0.876703 1.05203 0.918753 1.15355C0.960803 1.25507 1.02244 1.34731 1.10014 1.42501L7.90847 8.23333C8.37664 8.70209 8.6396 9.3375 8.6396 10C8.6396 10.6625 8.37664 11.2979 7.90847 11.7667L1.10014 18.575C1.02203 18.6525 0.960034 18.7446 0.917726 18.8462C0.875419 18.9477 0.853638 19.0566 0.853638 19.1667C0.853638 19.2767 0.875419 19.3856 0.917726 19.4871C0.960034 19.5887 1.02203 19.6809 1.10014 19.7583C1.178 19.8356 1.27035 19.8967 1.37188 19.9381C1.47341 19.9796 1.58213 20.0006 1.6918 20Z" fill="#262626" />
+                                <path d="M1.6918 20C1.80148 20.0006 1.91019 19.9796 2.01173 19.9381C2.11326 19.8967 2.2056 19.8356 2.28347 19.7583L9.0918 12.95C9.47983 12.5629 9.78769 12.1032 9.99774 11.5969C10.2078 11.0907 10.3159 10.5481 10.3159 10C10.3159 9.45194 10.2078 8.90926 9.99774 8.40305C9.78769 7.89685 9.47983 7.43705 9.0918 7.05L2.28347 0.241678C2.20577 0.163979 2.11353 0.102345 2.01201 0.0602948C1.91049 0.0182446 1.80169 -0.00339842 1.6918 -0.00339842C1.58192 -0.00339842 1.47311 0.0182446 1.3716 0.0602948C1.27008 0.102345 1.17784 0.163979 1.10014 0.241678C1.02244 0.319376 0.960803 0.411618 0.918753 0.513136C0.876703 0.614655 0.85506 0.723461 0.85506 0.833344C0.85506 0.943226 0.876703 1.05203 0.918753 1.15355C0.960803 1.25507 1.02244 1.34731 1.10014 1.42501L7.90847 8.23333C8.37664 8.70209 8.6396 9.3375 8.6396 10C8.6396 10.6625 8.37664 11.2979 7.90847 11.7667L1.10014 18.575C1.02203 18.6525 0.960034 18.7446 0.917726 18.8462C0.875419 18.9477 0.853638 19.0566 0.853638 19.1667C0.853638 19.2767 0.875419 19.3856 0.917726 19.4871C0.960034 19.5887 1.02203 19.6809 1.10014 19.7583C11.178 19.8356 1.27035 19.8967 1.37188 19.9381C1.47341 19.9796 1.58213 20.0006 1.6918 20Z" fill="#262626" />
                             </svg>
                         </div>
                     </div>

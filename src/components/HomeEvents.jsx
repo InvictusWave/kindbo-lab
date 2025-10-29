@@ -19,8 +19,8 @@ const HomeEvents = () => {
             <div className="container">
                 <div className="section-title-area text-center">
                     <p className="pre-title justify-content-center"><img src="assets/images/banner/title-img.svg" alt="" />Acara</p>
-                    <h2 className="section-title">Acara Mendatang</h2>
-                    <p className="desc">Kami sangat senang mengumumkan acara kami yang akan datang, <br /> Hari Penjelajah sebuah perayaan pengetahuan</p>
+                    <h2 className="section-title">Petualangan Spesial yang Akan Datang</h2>
+                    <p className="desc">Aktivitas tematik yang mengajak anak belajar lewat pengalaman nyata, bermain, dan bereksperimen bersama.</p>
                 </div>
                 <div className="section-inner">
                     <div className="row g-5">

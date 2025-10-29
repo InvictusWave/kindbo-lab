@@ -45,17 +45,17 @@ const Footer = () => {
                             <div className="footer-single-wized left-logo">
                                 <div className="head">
                                     <a href="#">
-                                        <img src="assets/images/logo/logo-1.png" alt="logo" loading="lazy" />
+                                        <img src="assets/images/logo/logo-1.webp" alt="logo" style={{maxHeight: '80px'}} />
                                     </a>
                                 </div>
                                 <div className="body">
                                     <p className="dsic">
-                                        Kami adalah pendidik yang bersemangat yang berdedikasi untuk menyediakan sumber daya berkualitas tinggi bagi pelajar
-                                        dari semua latar belakang.
+                                        KindboLab adalah ruang eksplorasi anak untuk belajar lewat pengalaman nyata — tempat di mana rasa ingin tahu tumbuh menjadi kreativitas.
                                     </p>
                                     <ul className="wrapper-list">
-                                        <li><i className="fa-regular fa-location-dot"></i>Yarra Park, Melbourne, Australia </li>
-                                        <li><i className="fa-regular fa-phone"></i><a href="tel:+4733378901">+(61) 485-826-710</a></li>
+                                        <li><i className="fa-regular fa-location-dot"></i>Semarang, Jawa Tengah, Indonesia </li>
+                                        <li><i className="fa-regular fa-phone"></i><a href="tel:+6281805333514">+62 81 805333514</a></li>
+                                        <li><i className="fa-regular fa-envelope"></i><a href="mailto:hello@kindbolab.id">hello@kindbolab.id</a></li>
                                     </ul>
                                 </div>
                             </div>
@@ -101,13 +101,13 @@ const Footer = () => {
                     <div className="row">
                         <div className="col-lg-12">
                             <div className="copyright-area-one">
-                                <p>Hak Cipta © 2024 Semua Hak Dilindungi oleh Kindbo Lab</p>
+                                <p>Hak Cipta © {new Date().getFullYear()} Semua Hak Dilindungi oleh Kindbo Lab</p>
                                 <div className="social-media-area">
                                     <ul className="social-media-area">
-                                        <li><a href="#"><i className="fa-brands fa-facebook"></i></a></li>
-                                        <li><a href="#"><i className="fa-brands fa-twitter"></i></a></li>
-                                        <li><a href="#"><i className="fa-brands fa-instagram"></i></a></li>
-                                        <li><a href="#"><i className="fa-brands fa-youtube"></i></a></li>
+                                        {/* <li><a href="#"><i className="fa-brands fa-facebook"></i></a></li> */}
+                                        {/* <li><a href="#"><i className="fa-brands fa-twitter"></i></a></li> */}
+                                        <li><a href="https://www.instagram.com/kindbolab/" target="_blank" rel="noopener noreferrer"><i className="fa-brands fa-instagram"></i></a></li>
+                                        <li><a href="/empty-state" target="_blank" rel="noopener noreferrer"><i className="fa-brands fa-youtube"></i></a></li>
                                     </ul>
                                 </div>
                             </div>

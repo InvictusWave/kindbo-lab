@@ -17,17 +17,16 @@ const About = ({ id }) => {
                                 <div className="about-content">
                                     <div className="section-title-area">
                                         <p className="pre-title"><img src="assets/images/banner/title-img.svg" alt="" />Tentang Kami</p>
-                                        <h2 className="section-title">Temukan Misi Kami untuk <br /> Akademi Kindbo Lab</h2>
-                                        <p className="desc">Selamat datang di Kindbo Lab, tempat pendidikan bertemu inspirasi, dan setiap <br /> perjalanan anak adalah kisah pertumbuhan dan penemuan.</p>
+                                        <h2 className="section-title">Tempat Anak Bereksperimen, Bermain, dan Berkembang</h2>
+                                        <p className="desc">KindboLab adalah ruang eksplorasi tematik bagi anak untuk belajar lewat pengalaman nyata. Kami percaya, rasa ingin tahu adalah awal dari kreativitas dan keberanian mencoba. Di sini, anak-anak tidak hanya belajar — tapi menemukan, bereksperimen, dan berkreasi melalui berbagai pengalaman bermakna setiap aktivitasnya</p>
                                     </div>
                                     <ul className="about-wrapper">
                                         <li className="wrapper-list">
                                             <div className="list-inner">
                                                 <div className="icon"><img src="assets/images/icon/01.svg" alt="" /></div>
                                                 <div className="content">
-                                                    <h4 className="title">Misi Kami</h4>
-                                                    <p className="desc">Di Kindbo Lab, misi kami adalah untuk menumbuhkan <br />
-                                                        lingkungan di mana rasa ingin tahu muncul.</p>
+                                                    <h4 className="title">Visi</h4>
+                                                    <p className="desc">Menjadi ruang eksplorasi yang menumbuhkan rasa ingin tahu, kreativitas, dan kemandirian anak melalui pengalaman belajar yang bermakna dan menyenangkan.</p>
                                                 </div>
                                             </div>
                                         </li>
@@ -35,9 +34,8 @@ const About = ({ id }) => {
                                             <div className="list-inner">
                                                 <div className="icon"><img src="assets/images/icon/02.svg" alt="" /></div>
                                                 <div className="content">
-                                                    <h4 className="title">Komitmen Kami</h4>
-                                                    <p className="desc">Saat kita memulai perjalanan pendidikan <br />
-                                                        bersama, kami tetap berkomitmen untuk menyediakan.</p>
+                                                    <h4 className="title">Misi</h4>
+                                                    <p className="desc">Menghadirkan ruang tematik yang mendorong anak bereksperimen dan berkreasi melalui pengalaman langsung, menumbuhkan rasa percaya diri, empati, dan keberanian mencoba, serta melibatkan orang tua dalam proses belajar yang bermakna dan menyenangkan.</p>
                                                 </div>
                                             </div>
                                         </li>
@@ -67,7 +65,10 @@ const About = ({ id }) => {
                             </div>
                             <div className="right-side-content">
                                 <h2 className="heading-title">Mengapa kami hadir</h2>
-                                <p className="desc">Mendaftarkan anak Anda di Kindbo Lab adalah proses yang sederhana dan mudah. Kami senang menyambut keluarga Anda ke dalam komunitas belajar kami yang dinamis.</p>
+                                <p className="desc">Di tengah dunia yang serba cepat dan digital, anak-anak membutuhkan ruang untuk berhenti sejenak — untuk merasakan, mencoba, dan menemukan.
+                                    KindboLab hadir sebagai tempat di mana rasa ingin tahu anak tak hanya dijawab, tapi dirayakan.
+                                    Kami ingin mengembalikan keajaiban belajar yang lahir dari tangan kotor, tawa lepas, dan momen “Aha!” saat anak menemukan hal baru dengan caranya sendiri.
+                                </p>
                                 {/*<div className="button-area">*/}
                                 {/*    <a href="about.html" className="rts-btn">Kunjungi Sekarang <i className="fa-solid fa-arrow-right"></i></a>*/}
                                 {/*</div>*/}
